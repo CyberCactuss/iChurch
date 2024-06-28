@@ -16,5 +16,11 @@ namespace ChurchSystem.Dashboard_Forms
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
