@@ -23,7 +23,6 @@ namespace ChurchSystem.Dashboard_Forms
     {
         private int month;
         private int year;
-        
 
         public Events()
         {
@@ -32,8 +31,7 @@ namespace ChurchSystem.Dashboard_Forms
             year = DateTime.Now.Year;
             SetMonthYearLabel();
             btnnext.Click += btnNext_Click;
-            btnprevious.Click += btnPrevious_Click;   
-
+            btnprevious.Click += btnPrevious_Click;
         }
 
         private void SetMonthYearLabel()
@@ -102,19 +100,32 @@ namespace ChurchSystem.Dashboard_Forms
                     button1.FlatAppearance.BorderSize = 1;
                     button1.Font = new System.Drawing.Font("Helvetica", 12, System.Drawing.FontStyle.Regular);
 
-
                     if (currentDay == DateTime.Now.Day && month == DateTime.Now.Month && year == DateTime.Now.Year)
                     {
                         button1.BackColor = System.Drawing.Color.LightBlue;
                         button1.ForeColor = System.Drawing.Color.Black;
                     }
+
+                    // Add click event handler for each day button
+                    button1.Click += (sender, e) =>
+                    {
+                        int selectedDay = int.Parse(button1.Text);
+                        DateTime selectedDate = new DateTime(year, month, selectedDay);
+                        OpenEventDetailsForm(selectedDate);
+                    };
                 }
 
                 button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
                 flowLayoutPanel1.Controls.Add(button1);
-                
             }
+        }
+
+        private void OpenEventDetailsForm(DateTime selectedDate)
+        {
+            Color eventColor = GenerateRandomColor();
+            EventDetailsForm eventDetailsForm = new EventDetailsForm(selectedDate, eventColor, panel5);
+            eventDetailsForm.ShowDialog();
         }
 
         private Color GenerateRandomColor()
@@ -126,14 +137,23 @@ namespace ChurchSystem.Dashboard_Forms
 
             return Color.FromArgb(red, green, blue);
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             DateTime selectedDate = DateTime.Today;
             Color eventColor = GenerateRandomColor();
             EventDetailsForm eventDetailsForm = new EventDetailsForm(selectedDate, eventColor, panel5);
             eventDetailsForm.ShowDialog();
-            eventDetailsForm.SetSelectedDate(selectedDate); ;
         }
-        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            panel5.AutoScroll = true;
+        }
     }
 }

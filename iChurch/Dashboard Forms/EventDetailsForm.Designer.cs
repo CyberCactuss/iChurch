@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventDetailsForm));
             panel1 = new Panel();
             panel4 = new Panel();
             button2 = new Button();
@@ -46,10 +47,9 @@
             label3 = new Label();
             btnadd = new Button();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            editToolStripMenuItem = new ToolStripMenuItem();
             deleteToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
-            editToolStripMenuItem = new ToolStripMenuItem();
-            deleteToolStripMenuItem1 = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
@@ -86,19 +86,21 @@
             // 
             // button2
             // 
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.Location = new Point(856, 7);
             button2.Name = "button2";
             button2.Size = new Size(44, 48);
             button2.TabIndex = 0;
-            button2.Text = "DOT\r\n";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // txttype
             // 
             txttype.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txttype.Location = new Point(462, 201);
             txttype.Name = "txttype";
-            txttype.Size = new Size(431, 31);
+            txttype.Size = new Size(436, 31);
             txttype.TabIndex = 16;
             // 
             // txtdescription
@@ -115,7 +117,7 @@
             txtvenue.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtvenue.Location = new Point(5, 282);
             txtvenue.Name = "txtvenue";
-            txtvenue.Size = new Size(730, 31);
+            txtvenue.Size = new Size(893, 31);
             txtvenue.TabIndex = 13;
             // 
             // txtdate
@@ -216,17 +218,21 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, deleteToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(117, 26);
+            contextMenuStrip1.Size = new Size(108, 48);
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(107, 22);
+            editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
-            deleteToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            deleteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editToolStripMenuItem, deleteToolStripMenuItem1 });
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(116, 22);
-            deleteToolStripMenuItem.Text = "Options";
+            deleteToolStripMenuItem.Size = new Size(107, 22);
+            deleteToolStripMenuItem.Text = "Delete";
             // 
             // button1
             // 
@@ -237,18 +243,6 @@
             button1.Text = "Back to Event List\r\n";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // editToolStripMenuItem
-            // 
-            editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(180, 22);
-            editToolStripMenuItem.Text = "Edit";
-            // 
-            // deleteToolStripMenuItem1
-            // 
-            deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            deleteToolStripMenuItem1.Size = new Size(180, 22);
-            deleteToolStripMenuItem1.Text = "Delete";
             // 
             // EventDetailsForm
             // 
@@ -288,9 +282,8 @@
         private TextBox txttype;
         private ContextMenuStrip contextMenuStrip1;
         private Button button1;
-        private ToolStripMenuItem deleteToolStripMenuItem;
         private Button button2;
         private ToolStripMenuItem editToolStripMenuItem;
-        private ToolStripMenuItem deleteToolStripMenuItem1;
+        private ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
