@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,17 +13,20 @@ namespace ChurchSystem.Dashboard_Forms.Members
 {
     public partial class EventDetailsForm : Form
     {
+       
+
         private string eventName;
         private string eventDateTime;
         private DateTime selectedDate;
         private Color eventColor;
         private Panel panel5;
+ 
 
         public TextBox EventNameTextBox => txteventname;
         public TextBox EventDateTextBox => txtdate;
         public ComboBox EventTimeComboBox => cmbtime;
 
-    
+
 
         public EventDetailsForm(DateTime date, Color eventColor, Panel panel5)
         {
@@ -30,8 +34,9 @@ namespace ChurchSystem.Dashboard_Forms.Members
             selectedDate = date;
             this.eventColor = eventColor;
             this.panel5 = panel5;
+            txtdate.Text = selectedDate.ToString("yyyy-MM-dd");
             SetSelectedDate(selectedDate);
-        
+
         }
 
         public void SetSelectedDate(DateTime date)
@@ -51,17 +56,54 @@ namespace ChurchSystem.Dashboard_Forms.Members
             SetSelectedDate(selectedDate);
         }
 
+        private static int nextButtonTop = 10;
+
         private void btnadd_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you want to create this event?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (result == DialogResult.OK)
             {
+                string eventName = txteventname.Text;
+                string eventDate = txtdate.Text;
+                string eventTime = cmbtime.SelectedItem?.ToString();
+                string eventVenue = txtvenue.Text;
+                string eventType = txttype.Text;
+                Color eventColor = this.eventColor;
 
-                CreateEvent(eventColor);
+                CreateEventButton(eventName, eventDate, eventTime, eventVenue, eventType, eventColor);
+            
+                this.Close();
             }
         }
 
+        private void CreateEventButton(string eventName, string eventDate, string eventTime, string eventVenue, string eventType, Color eventColor)
+        {
+            Button eventButton = new Button();
+            eventButton.Text = $"{eventName}\n{eventDate} {eventTime}\n{eventVenue}\n{eventType}";
+            eventButton.Size = new Size(590, 100);
+            eventButton.Location = new Point(10, nextButtonTop); 
+            eventButton.BackColor = eventColor;
+            eventButton.Font = new Font("Arial", 12, FontStyle.Regular | FontStyle.Italic);
+
+            panel5.Controls.Add(eventButton);
+            nextButtonTop += eventButton.Height + 10;
+
+            panel5.ScrollControlIntoView(eventButton);
+            eventButton.Click += (sender, e) =>
+            {
+        
+                EventDetailsForm eventDetailsForm = new EventDetailsForm(selectedDate, eventColor, panel5);
+                eventDetailsForm.EventNameTextBox.Text = eventName;
+                eventDetailsForm.EventDateTextBox.Text = eventDate;
+                eventDetailsForm.EventTimeComboBox.SelectedItem = eventTime;
+                eventDetailsForm.ShowDialog();
+                
+            };
+ 
+        }
+
+       
         private void CreateEvent(Color eventColor)
         {
             string eventName = EventNameTextBox.Text;
@@ -97,6 +139,7 @@ namespace ChurchSystem.Dashboard_Forms.Members
             }
         }
 
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -111,6 +154,11 @@ namespace ChurchSystem.Dashboard_Forms.Members
             }
         }
 
-       
+     
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(button2, new Point(0, button2.Height));
+        }
     }
 }
