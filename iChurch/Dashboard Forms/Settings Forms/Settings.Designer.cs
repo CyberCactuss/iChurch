@@ -54,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(36, 23);
+            label1.Location = new Point(36, 34);
             label1.Name = "label1";
             label1.Size = new Size(202, 56);
             label1.TabIndex = 2;
@@ -66,7 +66,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(43, 98);
+            label2.Location = new Point(43, 109);
             label2.Name = "label2";
             label2.Size = new Size(440, 25);
             label2.TabIndex = 3;
@@ -75,7 +75,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(236, 38);
+            pictureBox1.Location = new Point(236, 49);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 35);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -87,7 +87,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(43, 200);
+            label3.Location = new Point(43, 211);
             label3.Name = "label3";
             label3.Size = new Size(136, 28);
             label3.TabIndex = 5;
@@ -96,7 +96,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(49, 244);
+            textBox1.Location = new Point(49, 255);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(230, 33);
@@ -108,7 +108,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(43, 406);
+            label4.Location = new Point(43, 417);
             label4.Name = "label4";
             label4.Size = new Size(128, 28);
             label4.TabIndex = 7;
@@ -117,7 +117,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(43, 453);
+            textBox2.Location = new Point(43, 464);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(230, 33);
@@ -144,7 +144,7 @@
             guna2GradientButton1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton1.ForeColor = Color.White;
             guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            guna2GradientButton1.Location = new Point(43, 296);
+            guna2GradientButton1.Location = new Point(43, 307);
             guna2GradientButton1.Name = "guna2GradientButton1";
             guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2GradientButton1.Size = new Size(140, 47);
@@ -171,7 +171,7 @@
             guna2GradientButton2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton2.ForeColor = Color.White;
             guna2GradientButton2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            guna2GradientButton2.Location = new Point(43, 504);
+            guna2GradientButton2.Location = new Point(43, 515);
             guna2GradientButton2.Name = "guna2GradientButton2";
             guna2GradientButton2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2GradientButton2.Size = new Size(140, 47);
@@ -198,7 +198,7 @@
             guna2GradientButton3.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton3.ForeColor = Color.White;
             guna2GradientButton3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            guna2GradientButton3.Location = new Point(36, 638);
+            guna2GradientButton3.Location = new Point(36, 649);
             guna2GradientButton3.Name = "guna2GradientButton3";
             guna2GradientButton3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2GradientButton3.Size = new Size(201, 47);
@@ -218,7 +218,7 @@
             // 
             guna2Separator2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             guna2Separator2.FillThickness = 2;
-            guna2Separator2.Location = new Point(-3, 589);
+            guna2Separator2.Location = new Point(-3, 600);
             guna2Separator2.Name = "guna2Separator2";
             guna2Separator2.Size = new Size(915, 10);
             guna2Separator2.TabIndex = 23;
