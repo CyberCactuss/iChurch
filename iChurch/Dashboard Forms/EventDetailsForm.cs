@@ -13,14 +13,14 @@ namespace ChurchSystem.Dashboard_Forms.Members
 {
     public partial class EventDetailsForm : Form
     {
-       
+
 
         private string eventName;
         private string eventDateTime;
         private DateTime selectedDate;
         private Color eventColor;
         private Panel panel5;
- 
+
 
         public TextBox EventNameTextBox => txteventname;
         public TextBox EventDateTextBox => txtdate;
@@ -72,7 +72,7 @@ namespace ChurchSystem.Dashboard_Forms.Members
                 Color eventColor = this.eventColor;
 
                 CreateEventButton(eventName, eventDate, eventTime, eventVenue, eventType, eventColor);
-            
+
                 this.Close();
             }
         }
@@ -82,7 +82,7 @@ namespace ChurchSystem.Dashboard_Forms.Members
             Button eventButton = new Button();
             eventButton.Text = $"{eventName}\n{eventDate} {eventTime}\n{eventVenue}\n{eventType}";
             eventButton.Size = new Size(590, 100);
-            eventButton.Location = new Point(10, nextButtonTop); 
+            eventButton.Location = new Point(10, nextButtonTop);
             eventButton.BackColor = eventColor;
             eventButton.Font = new Font("Arial", 12, FontStyle.Regular | FontStyle.Italic);
 
@@ -92,18 +92,18 @@ namespace ChurchSystem.Dashboard_Forms.Members
             panel5.ScrollControlIntoView(eventButton);
             eventButton.Click += (sender, e) =>
             {
-        
+
                 EventDetailsForm eventDetailsForm = new EventDetailsForm(selectedDate, eventColor, panel5);
                 eventDetailsForm.EventNameTextBox.Text = eventName;
                 eventDetailsForm.EventDateTextBox.Text = eventDate;
                 eventDetailsForm.EventTimeComboBox.SelectedItem = eventTime;
                 eventDetailsForm.ShowDialog();
-                
+
             };
- 
+
         }
 
-       
+
         private void CreateEvent(Color eventColor)
         {
             string eventName = EventNameTextBox.Text;
@@ -139,7 +139,7 @@ namespace ChurchSystem.Dashboard_Forms.Members
             }
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -154,11 +154,16 @@ namespace ChurchSystem.Dashboard_Forms.Members
             }
         }
 
-     
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             contextMenuStrip1.Show(button2, new Point(0, button2.Height));
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

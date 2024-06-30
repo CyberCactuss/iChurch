@@ -67,7 +67,7 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(316, 228);
             flowLayoutPanel1.TabIndex = 7;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+
             // 
             // button1
             // 
