@@ -92,6 +92,46 @@ namespace ChurchSystem.Database
             return isValid;
         }
 
+        public string GetUsername(int userId)
+        {
+            string username = string.Empty;
+
+            try
+            {
+                using (SQLiteCommand command = new SQLiteCommand("SELECT Username FROM Admin WHERE UserID = @UserID", connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", userId);
+                    username = Convert.ToString(command.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving username: {ex.Message}");
+            }
+
+            return username;
+        }
+
+        public string GetPassword(int userId)
+        {
+            string password = string.Empty;
+
+            try
+            {
+                using (SQLiteCommand command = new SQLiteCommand("SELECT Password FROM Admin WHERE UserID = @UserID", connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", userId);
+                    password = Convert.ToString(command.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error retrieving password: {ex.Message}");
+            }
+
+            return password;
+        }
+
         public void InsertMemberDetails(MemberDetails memberDetails)
         {
             try

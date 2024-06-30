@@ -94,7 +94,7 @@ namespace ChurchSystem
 
         private void ShowChildForm(Form childForm)
         {
-            
+
             if (currentChildForm != null)
             {
                 currentChildForm.Hide();
@@ -143,7 +143,7 @@ namespace ChurchSystem
         private void guna2Button9_Click(object sender, EventArgs e) // LOG OUT BUTTON
         {
             login.FormClosed += (s, args) => this.Close();
-            this.Hide(); 
+            this.Hide();
             login.ShowDialog();
         }
 
@@ -152,5 +152,9 @@ namespace ChurchSystem
 
         }
 
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

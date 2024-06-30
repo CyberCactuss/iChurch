@@ -67,6 +67,7 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(316, 228);
             flowLayoutPanel1.TabIndex = 7;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // button1
             // 
@@ -229,7 +230,6 @@
             // 
             // button3
             // 
-          
             button3.BackgroundImageLayout = ImageLayout.Zoom;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Location = new Point(555, 7);

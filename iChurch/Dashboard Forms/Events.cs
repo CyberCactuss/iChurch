@@ -23,7 +23,7 @@ namespace ChurchSystem.Dashboard_Forms
     {
         private int month;
         private int year;
-        
+
 
         public Events()
         {
@@ -32,7 +32,7 @@ namespace ChurchSystem.Dashboard_Forms
             year = DateTime.Now.Year;
             SetMonthYearLabel();
             btnnext.Click += btnNext_Click;
-            btnprevious.Click += btnPrevious_Click;   
+            btnprevious.Click += btnPrevious_Click;
 
         }
 
@@ -113,7 +113,7 @@ namespace ChurchSystem.Dashboard_Forms
                 button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
                 flowLayoutPanel1.Controls.Add(button1);
-                
+
             }
         }
 
@@ -134,6 +134,10 @@ namespace ChurchSystem.Dashboard_Forms
             eventDetailsForm.ShowDialog();
             eventDetailsForm.SetSelectedDate(selectedDate); ;
         }
-        
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -45,6 +45,8 @@
             guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(36, 40);
+            label1.Location = new Point(36, 23);
             label1.Name = "label1";
             label1.Size = new Size(202, 56);
             label1.TabIndex = 2;
@@ -64,7 +66,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(43, 115);
+            label2.Location = new Point(43, 98);
             label2.Name = "label2";
             label2.Size = new Size(440, 25);
             label2.TabIndex = 3;
@@ -73,7 +75,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(237, 56);
+            pictureBox1.Location = new Point(236, 38);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 35);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -96,8 +98,10 @@
             textBox1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(49, 244);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(230, 33);
-            textBox1.TabIndex = 6;
+            textBox1.TabIndex = 14;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -115,8 +119,10 @@
             textBox2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.Location = new Point(43, 453);
             textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
             textBox2.Size = new Size(230, 33);
             textBox2.TabIndex = 8;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // guna2GradientButton1
             // 
@@ -192,12 +198,30 @@
             guna2GradientButton3.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2GradientButton3.ForeColor = Color.White;
             guna2GradientButton3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            guna2GradientButton3.Location = new Point(36, 635);
+            guna2GradientButton3.Location = new Point(36, 638);
             guna2GradientButton3.Name = "guna2GradientButton3";
             guna2GradientButton3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2GradientButton3.Size = new Size(201, 47);
             guna2GradientButton3.TabIndex = 21;
             guna2GradientButton3.Text = "Update All";
+            // 
+            // guna2Separator1
+            // 
+            guna2Separator1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Separator1.FillThickness = 2;
+            guna2Separator1.Location = new Point(-3, 155);
+            guna2Separator1.Name = "guna2Separator1";
+            guna2Separator1.Size = new Size(915, 10);
+            guna2Separator1.TabIndex = 22;
+            // 
+            // guna2Separator2
+            // 
+            guna2Separator2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            guna2Separator2.FillThickness = 2;
+            guna2Separator2.Location = new Point(-3, 589);
+            guna2Separator2.Name = "guna2Separator2";
+            guna2Separator2.Size = new Size(915, 10);
+            guna2Separator2.TabIndex = 23;
             // 
             // Settings
             // 
@@ -205,6 +229,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(909, 694);
+            Controls.Add(guna2Separator2);
+            Controls.Add(guna2Separator1);
             Controls.Add(guna2GradientButton3);
             Controls.Add(guna2GradientButton2);
             Controls.Add(guna2GradientButton1);
@@ -234,5 +260,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
     }
 }
