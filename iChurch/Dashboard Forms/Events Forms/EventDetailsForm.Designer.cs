@@ -50,6 +50,7 @@
             editToolStripMenuItem = new ToolStripMenuItem();
             deleteToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
+            saveToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
@@ -81,7 +82,7 @@
             panel4.Controls.Add(button2);
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(910, 62);
+            panel4.Size = new Size(910, 75);
             panel4.TabIndex = 6;
             panel4.Paint += panel4_Paint;
             // 
@@ -89,7 +90,7 @@
             // 
             button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Location = new Point(856, 7);
+            button2.Location = new Point(856, 13);
             button2.Name = "button2";
             button2.Size = new Size(44, 48);
             button2.TabIndex = 0;
@@ -99,7 +100,7 @@
             // txttype
             // 
             txttype.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txttype.Location = new Point(462, 201);
+            txttype.Location = new Point(462, 148);
             txttype.Name = "txttype";
             txttype.Size = new Size(436, 31);
             txttype.TabIndex = 16;
@@ -107,7 +108,7 @@
             // txtdescription
             // 
             txtdescription.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdescription.Location = new Point(8, 439);
+            txtdescription.Location = new Point(13, 432);
             txtdescription.Multiline = true;
             txtdescription.Name = "txtdescription";
             txtdescription.Size = new Size(885, 178);
@@ -116,7 +117,7 @@
             // txtvenue
             // 
             txtvenue.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtvenue.Location = new Point(5, 282);
+            txtvenue.Location = new Point(5, 229);
             txtvenue.Name = "txtvenue";
             txtvenue.Size = new Size(893, 31);
             txtvenue.TabIndex = 13;
@@ -124,7 +125,7 @@
             // txtdate
             // 
             txtdate.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtdate.Location = new Point(462, 359);
+            txtdate.Location = new Point(462, 306);
             txtdate.Name = "txtdate";
             txtdate.Size = new Size(302, 31);
             txtdate.TabIndex = 12;
@@ -134,7 +135,7 @@
             cmbtime.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbtime.FormattingEnabled = true;
             cmbtime.Items.AddRange(new object[] { "12:00 AM ", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "5:00 AM", "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM ", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM" });
-            cmbtime.Location = new Point(8, 359);
+            cmbtime.Location = new Point(8, 306);
             cmbtime.Name = "cmbtime";
             cmbtime.Size = new Size(302, 29);
             cmbtime.TabIndex = 11;
@@ -143,7 +144,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(462, 164);
+            label9.Location = new Point(462, 111);
             label9.Name = "label9";
             label9.Size = new Size(146, 25);
             label9.TabIndex = 7;
@@ -152,7 +153,7 @@
             // txteventname
             // 
             txteventname.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txteventname.Location = new Point(8, 201);
+            txteventname.Location = new Point(8, 148);
             txteventname.Name = "txteventname";
             txteventname.Size = new Size(416, 31);
             txteventname.TabIndex = 0;
@@ -161,7 +162,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(8, 411);
+            label8.Location = new Point(13, 404);
             label8.Name = "label8";
             label8.Size = new Size(109, 25);
             label8.TabIndex = 6;
@@ -171,7 +172,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(5, 254);
+            label6.Location = new Point(5, 201);
             label6.Name = "label6";
             label6.Size = new Size(79, 25);
             label6.TabIndex = 4;
@@ -181,7 +182,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(462, 331);
+            label5.Location = new Point(462, 278);
             label5.Name = "label5";
             label5.Size = new Size(184, 25);
             label5.TabIndex = 3;
@@ -191,7 +192,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(8, 331);
+            label4.Location = new Point(8, 278);
             label4.Name = "label4";
             label4.Size = new Size(185, 25);
             label4.TabIndex = 2;
@@ -201,7 +202,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(8, 164);
+            label3.Location = new Point(8, 111);
             label3.Name = "label3";
             label3.Size = new Size(150, 25);
             label3.TabIndex = 1;
@@ -219,20 +220,20 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, deleteToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, deleteToolStripMenuItem, saveToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(108, 48);
+            contextMenuStrip1.Size = new Size(181, 92);
             // 
             // editToolStripMenuItem
             // 
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(107, 22);
+            editToolStripMenuItem.Size = new Size(180, 22);
             editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(107, 22);
+            deleteToolStripMenuItem.Size = new Size(180, 22);
             deleteToolStripMenuItem.Text = "Delete";
             // 
             // button1
@@ -244,6 +245,12 @@
             button1.Text = "Back to Event List\r\n";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Text = "Save";
             // 
             // EventDetailsForm
             // 
@@ -286,5 +293,6 @@
         private Button button2;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem deleteToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
     }
 }
